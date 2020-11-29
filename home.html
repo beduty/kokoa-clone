@@ -8,24 +8,26 @@
         <meta name = "description", content="This is my Website"/>
     </head>
     <body>
-        <h1>
-            Hello!
-        </h1>      
-        <!-- abbr를 쓰면 ToolTip처럼 동작한다.   -->
-        <p>My name is <abbr title = "blarblarblar">NSA</abbr></p>
+        <form>
+            <input type = "color"/>        
+            <input type = "file" accept="image/*,.log"/>        
+            <input required type = "text" placeholder="Name"/>    
+            <input required type = "text" placeholder="Last Name"/>    
+            <input required type = "text" placeholder="UserName"/>  
+            <input required type = "password" minlength= "10" placeholder="password"/>    
+            <input type = "submit" value="Create Account"/>    
+        </form>
+        <form>
+            <!-- for-id로 연결되어 있기때문에 label을 누르면 Input을 누른것과 동일한 효과가 나타난다. -->
+            <label for="profile">Profile Photo</label>
+            <input id = "profile" type = "file" accept=".png,.pdf"/>
+            <label for = "first-name">First Name</label>
+            <input id = "first-name" required type = "text" placeholder="Name"/>    
 
-        <!-- mark를 쓰면 Text에 Highlight가 된다.-->
-        <p>I like to live in <mark>South Korea</mark></p>
-        <p>I like to live in <strong>South Korea</strong></p>
-        <p>I like to live in <sub>South Korea</sub></p>
-        <p>I like to live in <sup>South Korea</sup></p>
-        <p>2<sup>5</sup></p>
-        <audio controls = "true" src = "https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3"></audio>
-        <video controls width="250">
-            <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
-                    type="video/webm">
-        </video>
-    
+            <label for = "email">Email</label>
+            <input id = "email" required type = "email" placeholder="input email"/>   
+            <input type = "submit" value="Go!"/>    
+        </form>
     </body>
 </html>
 
