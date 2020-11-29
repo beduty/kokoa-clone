@@ -2,24 +2,47 @@ body {
   height: 1000vh;
   margin: 50px;
 }
-input {
-  border: 2px;
+
+button:active {
+  background-color: tomato;
+}
+button:hover {
+  background-color: goldenrod;
+}
+input:focus {
+  background-color: green;
+  opacity: 0.5;
+}
+a:visited {
+  /* 방문한 적이 있으면 green이 된다. */
+  color: green;
+}
+a:hover {
+  color: hotpink;
+}
+
+form {
+  border: 3px;
   border-style: solid;
-  border-color: wheat;
+  border-color: red;
+  display: flex;
+  flex-direction: column;
+  padding: 20pt;
 }
-input:required {
-  border-color: tomato;
+
+/* form 내부의 객체들 중 하나가 focus될 때 적용되는 Style이다.  */
+form:focus-within {
+  border-color: seagreen;
 }
-input[type="password"] {
-  background-color: purple;
-  opacity: 0.5;
+
+/*form이 hover되었을때, name이 "first"인 input에 대하여 스타일 적용한다.   */
+form:hover input[name="first"] {
+  background-color: sienna;
 }
-/* placeholder가 "email"인 것에 대해서 스타일을 적용한다.*/
-input[placeholder="email"] {
-  background-color: dodgerblue;
-  opacity: 0.5;
-}
-/* ~= placeholder에 "Addr"가 들어가는 객체에 대해서 스타일을 적용한다. */
-input[placeholder~="Addr"] {
-  background-color: purple;
+
+/*form이 hover되었을때, name이 "second"인 input이 focus되었을때 스타일 적용한다.   */
+form:hover input[name="second"]:focus {
+  border: 10px;
+  border-style: solid;
+  border-color: red;
 }
