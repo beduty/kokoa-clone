@@ -46,3 +46,11 @@ form:hover input[name="second"]:focus {
   border-style: solid;
   border-color: red;
 }
+
+input::placeholder {
+  color: yellowgreen;
+}
+p::selection {
+  background-color: tomato;
+  color: white;
+}
