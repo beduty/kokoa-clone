@@ -9,10 +9,25 @@ div {
   position: relative;
 }
 
-/* p 안의 span에 대해서 아래와 같은 스타일을 적용한다.  */
+span {
+  margin-left: 10px;
+  padding: 5px;
+  border-radius: 10px;
+}
+/* p 안의 모든span들에 대해서 아래와 같은 스타일을 적용한다.  */
 p span {
   color: red;
 }
+
+/* div안의 바로 밑 Child span들에 대해서만 아래와 같은 스타일을 적용한다.  */
+div > span {
+  text-decoration: underline;
+}
+/* p 안이 아닌 p 밑에 있는 span에 대해서 다음과 같은 스타이을 적용한다.  */
+p + span {
+  text-decoration: none;
+}
+/* --> 위의 두개는 사실상 가리키는 것이 동일한다! */
 div:first-child {
   background-color: tomato;
 }
