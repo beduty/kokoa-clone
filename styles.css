@@ -1,36 +1,63 @@
-/* infinite로 하면 to에서 다시 fram으로 돌아올때, 뚝 끊기는 현상이 나타난다. */
-@keyframes melaniAnim {
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+div {
+  background-color: teal;
+  width: 200px;
+  height: 200px;
+}
+span {
+  font-size: 36px;
+}
+@keyframes screenSmallAnim {
   from {
-    transform: rotateX(0);
+    border-radius: 0px;
   }
   to {
-    transform: rotateX(360deg) rotateZ(180deg) scale(1.2);
+    border-radius: 30px;
   }
 }
 
-/* 다시 제자리로 돌아오는 애니메이션을 sequential하게 적용할 수 있다. */
-@keyframes melaniAnimRollBack {
-  0% {
-    transform: rotateX(0);
+@keyframes screenBigAnim {
+  from {
+    border-radius: 30px;
   }
-  50% {
-    transform: rotateX(360deg) rotateZ(180deg) scale(1.2);
-  }
-  100% {
-    transform: rotateX(0);
+  to {
+    background-color: dodgerblue;
+    border-radius: 0px;
   }
 }
-img {
-  width: 300px;
-  height: 300px;
-  border: 10px;
-  border-style: solid;
-  border-radius: 50%;
-  color: teal;
-  animation: melaniAnimRollBack 5s ease-in-out infinite;
+
+/* 스크린의 width가 600px보다 작으면 적용되는 스타일이다.  */
+@media screen and (max-width: 600px) {
+  div {
+    background-color: tomato;
+    border-radius: 30px;
+    animation: screenSmallAnim 1s ease-in-out;
+  }
 }
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+/* 스크린의 width가 600px보다 크고 800px보다 작을떄 적용되는 스타일이다.  */
+@media screen and (min-width: 600px) and (max-width: 800px) {
+  div {
+    background-color: dodgerblue;
+    animation: screenBigAnim 1s ease-in-out;
+  }
+}
+
+/* 스크린이 가로보기 모드일때 적용되는 스타일이다.  */
+@media screen and (orientation: landscape) {
+  div {
+    background-color: tomato;
+    border-radius: 30px;
+    animation: screenSmallAnim 1s ease-in-out;
+  }
+  /* 가로보기 일때는 해당 span이 나타나지 않는다.  */
+  span {
+    display: none;
+  }
 }
