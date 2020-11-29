@@ -8,11 +8,23 @@ div {
   background-color: wheat;
   position: relative;
 }
-.green {
+
+/* p 안의 span에 대해서 아래와 같은 스타일을 적용한다.  */
+p span {
+  color: red;
+}
+div:first-child {
+  background-color: tomato;
+}
+div:last-child {
   background-color: teal;
-  height: 100px;
-  width: 100px;
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
+}
+span {
+  background-color: tomato;
+}
+span:nth-child(2) {
+  background-color: teal;
+}
+span:nth-child(odd) {
+  background-color: dodgerblue;
 }
