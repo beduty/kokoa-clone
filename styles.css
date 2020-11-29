@@ -5,3 +5,13 @@ span {
   background-color: teal;
   padding: 20px;
 }
+.tomato {
+  background-color: tomato;
+  border-radius: 10px;
+}
+.bigText {
+  font-size: 30px;
+}
+.boldText {
+  font-weight: 800;
+}
