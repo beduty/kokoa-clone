@@ -2,53 +2,24 @@ body {
   height: 1000vh;
   margin: 50px;
 }
-div {
-  width: 300px;
-  height: 300px;
-  background-color: wheat;
-  position: relative;
+input {
+  border: 2px;
+  border-style: solid;
+  border-color: wheat;
 }
-
-span {
-  margin-left: 10px;
-  padding: 5px;
-  border-radius: 10px;
+input:required {
+  border-color: tomato;
 }
-/* p 안의 모든span들에 대해서 아래와 같은 스타일을 적용한다.  */
-p span {
-  color: red;
+input[type="password"] {
+  background-color: purple;
+  opacity: 0.5;
 }
-
-/* div안의 바로 밑 Child span들에 대해서만 아래와 같은 스타일을 적용한다. 
-div > span {
-  text-decoration: underline;
-}
-/* p 안이 아닌 p 밑에 있는 span에 대해서 다음과 같은 스타이을 적용한다.  */
-/* p + span {
-  text-decoration: underline;
-}
-*/
-
-/*p + span는 p 바로 다음의 형제 span에만 적용되었는데,  p ~ span는 형제이기만 하면 
-  ㅔ
-*/
-p ~ span {
-  text-decoration: underline;
-}
-
-/* --> 위의 두개는 사실상 가리키는 것이 동일한다! */
-div:first-child {
-  background-color: tomato;
-}
-div:last-child {
-  background-color: teal;
-}
-span {
-  background-color: tomato;
-}
-span:nth-child(2) {
-  background-color: teal;
-}
-span:nth-child(odd) {
+/* placeholder가 "email"인 것에 대해서 스타일을 적용한다.*/
+input[placeholder="email"] {
   background-color: dodgerblue;
+  opacity: 0.5;
+}
+/* ~= placeholder에 "Addr"가 들어가는 객체에 대해서 스타일을 적용한다. */
+input[placeholder~="Addr"] {
+  background-color: purple;
 }
