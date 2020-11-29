@@ -1,60 +1,16 @@
-:root {
-  --main-color: #fcce00;
-}
-
-body {
-  height: 1000vh;
-  margin: 50px;
-}
-
-button:active {
+a {
+  color: wheat;
   background-color: tomato;
-}
-button:hover {
-  background-color: goldenrod;
-}
-input:focus {
-  background-color: green;
-  opacity: 0.5;
-}
-a:visited {
-  /* 방문한 적이 있으면 green이 된다. */
-  color: green;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 55px;
+  transition: background-color 1s ease-in-out;
+  transition: color 3s ease-in-out;
+  transition: font-size 3s ease-in-out;
 }
 a:hover {
-  color: hotpink;
-}
-
-form {
-  border: 3px;
-  border-style: solid;
-  border-color: red;
-  display: flex;
-  flex-direction: column;
-  padding: 20pt;
-}
-
-/* form 내부의 객체들 중 하나가 focus될 때 적용되는 Style이다.  */
-form:focus-within {
-  border-color: seagreen;
-}
-
-/*form이 hover되었을때, name이 "first"인 input에 대하여 스타일 적용한다.   */
-form:hover input[name="first"] {
-  background-color: sienna;
-}
-
-/*form이 hover되었을때, name이 "second"인 input이 focus되었을때 스타일 적용한다.   */
-form:hover input[name="second"]:focus {
-  border: 10px;
-  border-style: solid;
-  border-color: red;
-}
-
-input::placeholder {
-  color: yellowgreen;
-}
-p::selection {
-  background-color: var(--main-color);
-  color: white;
+  font-size: 20px;
+  color: tomato;
+  background-color: wheat;
 }
