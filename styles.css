@@ -1,20 +1,25 @@
-a {
-  color: wheat;
-  background-color: tomato;
-  text-decoration: none;
-  padding: 5px;
-  border-radius: 5px;
-  font-size: 55px;
-  transition: background-color 1s ease-in-out;
-  transition: color 3s ease-in-out;
-  transition: font-size 3s ease-in-out;
-}
-a:hover {
-  font-size: 20px;
-  color: tomato;
-  background-color: wheat;
+/* infinite로 하면 to에서 다시 fram으로 돌아올때, 뚝 끊기는 현상이 나타난다. */
+@keyframes melaniAnim {
+  from {
+    transform: rotateX(0);
+  }
+  to {
+    transform: rotateX(360deg) rotateZ(180deg) scale(1.2);
+  }
 }
 
+/* 다시 제자리로 돌아오는 애니메이션을 sequential하게 적용할 수 있다. */
+@keyframes melaniAnimRollBack {
+  0% {
+    transform: rotateX(0);
+  }
+  50% {
+    transform: rotateX(360deg) rotateZ(180deg) scale(1.2);
+  }
+  100% {
+    transform: rotateX(0);
+  }
+}
 img {
   width: 300px;
   height: 300px;
@@ -22,13 +27,10 @@ img {
   border-style: solid;
   border-radius: 50%;
   color: teal;
-  /*
-  Transform은 다른 요소들에는 영향을 미치지 않고, 원하는 요소에만 적용된다!
-  transform: rotateZ(35deg) scaleX(1.2) translateX(50px);
-  */
-  transition: transform 1s ease-in-out;
+  animation: melaniAnimRollBack 5s ease-in-out infinite;
 }
-
-img:hover {
-  transform: rotateZ(90deg) rotateX(360deg) scale(1.2);
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
