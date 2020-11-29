@@ -14,3 +14,21 @@ a:hover {
   color: tomato;
   background-color: wheat;
 }
+
+img {
+  width: 300px;
+  height: 300px;
+  border: 10px;
+  border-style: solid;
+  border-radius: 50%;
+  color: teal;
+  /*
+  Transform은 다른 요소들에는 영향을 미치지 않고, 원하는 요소에만 적용된다!
+  transform: rotateZ(35deg) scaleX(1.2) translateX(50px);
+  */
+  transition: transform 1s ease-in-out;
+}
+
+img:hover {
+  transform: rotateZ(90deg) rotateX(360deg) scale(1.2);
+}
