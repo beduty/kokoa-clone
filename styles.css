@@ -19,14 +19,23 @@ p span {
   color: red;
 }
 
-/* div안의 바로 밑 Child span들에 대해서만 아래와 같은 스타일을 적용한다.  */
+/* div안의 바로 밑 Child span들에 대해서만 아래와 같은 스타일을 적용한다. 
 div > span {
   text-decoration: underline;
 }
 /* p 안이 아닌 p 밑에 있는 span에 대해서 다음과 같은 스타이을 적용한다.  */
-p + span {
-  text-decoration: none;
+/* p + span {
+  text-decoration: underline;
 }
+*/
+
+/*p + span는 p 바로 다음의 형제 span에만 적용되었는데,  p ~ span는 형제이기만 하면 
+  ㅔ
+*/
+p ~ span {
+  text-decoration: underline;
+}
+
 /* --> 위의 두개는 사실상 가리키는 것이 동일한다! */
 div:first-child {
   background-color: tomato;
