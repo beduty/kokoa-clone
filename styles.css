@@ -1,12 +1,16 @@
-div {
-  height: 150px;
-  width: 150px;
+/* body {
   background-color: tomato;
-  text-align: center;
+} */
+body {
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  background-color: cadetblue;
 }
-span {
-  display: block;
+div {
+  margin-left: 50;
   height: 150px;
   width: 150px;
-  background-color: turquoise;
+  background-color: white;
 }
