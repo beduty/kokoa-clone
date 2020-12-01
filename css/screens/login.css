@@ -1,0 +1,68 @@
+.welcome-header {
+  margin-top: 90px;
+  margin-bottom: 90px;
+  text-align: center;
+  /* 부모에 flex를 해야 자식들에게 매겨진다. */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 600;
+}
+
+.welcome-header__title {
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+
+.welcome-header__text {
+  width: 60%;
+  opacity: 0.8;
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0px;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+#login-form input {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 0px;
+  padding-left: 0px;
+  border: none;
+  font-size: 18px;
+  margin-bottom: 25px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+#login-form input:not([type="submit"]) {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+#login-form input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+#login-form input:focus {
+  border-color: var(--yellow);
+}
+
+#login-form input[type="submit"] {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: var(--yellow);
+  border-radius: 5px;
+  cursor: pointer;
+  /* cursor: progress; */
+  /* cursor: not-allowed; */
+}
+
+#login-form a {
+  text-align: center;
+  text-decoration: none;
+  color: inherit; /* 색상을 상속받는다. login-form의 기본색상과 동일한 색상을 받아온다.*/
+  font-size: 13px;
+}
