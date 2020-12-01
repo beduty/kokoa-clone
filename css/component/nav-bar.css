@@ -1,0 +1,49 @@
+.nav {
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  background-color: #f9f9fa;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  box-sizing: border-box; /* Padding에 의해서 Width가 늘어나지 않는다! */
+  border-top: 1px solid rgba(121, 121, 121, 0.3);
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__link {
+  color: #2e363e;
+  position: relative;
+}
+
+.nav__notification {
+  background-color: tomato;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  /* display: block; inline은 Width와 Height가 없기 때문! */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+
+  /* 부모가 relative여야 한다. 해당 부모를 기준으로 움직인다.*/
+  /* flex로 상하 겹치지 않게 배치되어있는 레이어 구조를 깨줘야 한다. -> Absolute로! */
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+}
+
+.nav_notification-small {
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  left: 30px;
+  bottom: 30px;
+}

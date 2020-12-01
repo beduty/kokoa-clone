@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to KokoaTalk</title>
+    <title>Friends Screen -Kokoa Clone </title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -24,23 +24,27 @@
         </div><!-- 배터리 상태-->
     </div>
 
-    <header class="welcome-header">
-        <h1 class="welcome-header__title">Welcome to KokoaTalk</h1>
-        <p class="welcome-header__text">If you have a Kokoa Account, log in with your email or phone number.</p>
-    </header>
 
-    <!-- form Action -->
-    <!-- 어떤 페이지로 Data를 보낼지 지정할 수 있다.  -->
-
-    <!-- form Method -->
-    <!-- POST : 백엔드 서버에 정보를 전송한다. -->
-    <!-- GET : 정보를 전송한다.(보안에 취약) URL에 정보가 포함된다.-->
-    <form action="friends.html" method="get" id = "login-form">
-        <input name="username" type="text" placeholder="Email or phone number"/>
-        <input name="password" type="password" placeholder="Password"/>
-        <input type="submit" value="Log In"/>
-        <a href="#">Find Kokoa Account or Password.</a>
-    </form>
+    <!-- 이렇게 쓰면 한번에 끝! nav>ui>li*4>a -->    
+    <nav class="nav">
+        <ul class = "nav__list">
+            <li class = "nav__btn"><a class = "nav__link" href="friends.html"><i class="fas fa-user fa-2x"></i></a></li>
+            <li class = "nav__btn">
+                <a class = "nav__link" href="#">
+                    <span class ="nav__notification">1</span>
+                    <i class="far fa-comment fa-2x"></i>
+                </a>
+            </li>
+            <li class = "nav__btn"><a class = "nav__link" href="#"><i class="fas fa-search fa-2x"></i></a></li>
+            <li class = "nav__btn">
+                <a class = "nav__link" href="#">
+                    <div class = "nav__notification nav_notification-small"></div>
+                    <i class="fas fa-ellipsis-h fa-2x"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    
 
     <!-- font Awesome 사용 Key -->
     <!-- Script는 항상 마지막에 있어야 한다.  -->
