@@ -1,0 +1,39 @@
+#friends-display-link {
+  /* Width가 있으려면 display : block; 이어야 한다.  */
+  display: block;
+  width: 100%;
+  text-align: center;
+  background-color: #fafafa;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#friends-display-link i {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.friends-screen {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: var(--horizontal-space);
+  padding-right: var(--horizontal-space);
+}
+
+.friends-screen__channel {
+  margin-top: 25px;
+  border-top: 1px;
+  border-color: rgba(0, 0, 0, 0.3);
+  border-style: solid;
+  /*  border와  <span>Channel 간의 간격을 줘야한다.
+  경계와 Content간의 간격을 주기위해서는 padding을 쓴다! */
+  padding-top: 15px;
+}
+
+.friends-screen__channel-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  color: rgba(0, 0, 0, 0.5);
+}
