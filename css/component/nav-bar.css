@@ -22,17 +22,8 @@
 }
 
 .nav__notification {
-  background-color: tomato;
   width: 30px;
   height: 30px;
-  border-radius: 15px;
-  /* display: block; inline은 Width와 Height가 없기 때문! */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-weight: 600;
-
   /* 부모가 relative여야 한다. 해당 부모를 기준으로 움직인다.*/
   /* flex로 상하 겹치지 않게 배치되어있는 레이어 구조를 깨줘야 한다. -> Absolute로! */
   position: absolute;

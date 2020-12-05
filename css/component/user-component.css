@@ -46,5 +46,32 @@
 }
 
 .user-component__column:last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   color: rgba(0, 0, 0, 0.5);
+
+  /* 
+  friends.html의 기존부분을 바꿔 줘야한다. 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; 에 의해서 Friends의 해당부분에도 영향이 가기 때문!
+
+                <div class="user-component__column">
+                     <span>2</span>
+                     <i class="fas fa-chevron-right fa-xs"></i>
+                </div>
+  아래와 같이 바꿔준다. 
+                <div class="user-component__column">
+                    <div>
+                        <span>2</span>
+                        <i class="fas fa-chevron-right fa-xs"></i>
+                    </div>
+                </div>
+                */
+}
+
+.user-component__time {
+  margin-bottom: 10px;
+  display: block;
 }

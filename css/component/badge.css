@@ -1,0 +1,10 @@
+.badge {
+  background-color: tomato;
+  border-radius: 15px;
+  /* display: block; inline은 Width와 Height가 없기 때문! */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+}
