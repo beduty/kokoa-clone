@@ -19,3 +19,8 @@
 .screen-header__icons i {
   margin-left: 20px;
 }
+
+.screen-header__icons svg {
+  width: 20px;
+  height: 20px;
+}
