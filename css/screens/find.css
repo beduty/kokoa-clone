@@ -100,9 +100,31 @@
   bottom: 10px;
   left: 10px;
 }
+
 .open-post__heart-count svg {
   width: 20px;
   height: 20px;
   color: white;
   margin-right: 5px;
+}
+
+@keyframes haertbeatAnimation {
+  0% {
+    transform: none;
+  }
+  50% {
+    /* width: 40px;
+    height: 40px; */
+    transform: scale(2);
+    color: tomato;
+  }
+  100% {
+    transform: none;
+  }
+}
+.open-post__heart-count svg:hover {
+  /* 브라우저에게 어떤 것이 바뀔지 미리 이야기 해줄수 있다. 
+  -> 브라우저가 미리 준비할 수 있도록 한다. 그래픽카드를 통해 미리 가속화 준비를 할 수 있게 된다.  */
+  will-change: transform;
+  animation: haertbeatAnimation 1s linear infinite;
 }
